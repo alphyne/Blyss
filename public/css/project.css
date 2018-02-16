@@ -161,3 +161,8 @@
   height: 50%;
   padding: 20px;
 }
+
+.graphBuffer {
+  height: 300px;
+  text-align: center;
+}

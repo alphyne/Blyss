@@ -16,8 +16,6 @@ function myFunction() {
   }
 }
 
-function getEmote() {
-  //var emoteSrc = $(this).attr('src');
-  var emoteSrc = document.getElementById
-  return emoteSrc;
-}
+$('input:button').click(function(){
+	alert($(this.val());
+});
