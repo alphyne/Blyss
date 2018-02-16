@@ -15,15 +15,25 @@
 <script
 src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<style>
+input[type=text]{
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius:4px;
+}
+</style>
+
 </head>
 <body>
 
 <!-- Top fixed nav bar -->
 <div id="navbartop">
 
-	<a href="asdf">Submit</a>
+	<a href="/">Submit</a>
 	<a href="">Make Post</a>
-	<a href=""></a>
+	<a href="/">Cancel</a>
 
 </div>
 <!--
@@ -32,11 +42,24 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 <div class = "activeHome">
 	
 	<!-- Iterate through data.json -->
-	<div class="selectedEmote">
-		<img src="{{emote}}">
-		<a href="/selectEmote">Change emote</a>
-
+	<div class="selectedEmoteContainer">
+	<h1><img src="emotes/happy1.png" class="selectedEmote">
+	</h1>
+	
+	<h4><a href="/selectEmote">Change emote</a>
+	</h4>
 	</div>
+
+<div class ="textBox">
+
+<hr>
+<h6>I'm feeling...</h6>
+<form>
+  <label for="mood"></label>
+  <input type="text" id="mood" name="mood">
+
+</div>
+
 </div>
 
 

@@ -16,6 +16,7 @@ var graph = require('./routes/graph');
 var selectEmote = require('./routes/selectEmote');
 var makePost = require('./routes/makePost');
 
+
 var app = express();
 
 // all environments
@@ -44,6 +45,7 @@ app.get('/', index.view);
 app.get('/happy', happy.view);
 app.get('/graph', graph.view);
 app.get('/selectEmote', selectEmote.view);
+app.get('/makePost', makePost.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

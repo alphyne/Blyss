@@ -156,13 +156,22 @@
 }
 
 /* Make Post page */
-.selectedEmote {
+.selectedEmoteContainer {
   text-align: center;
-  height: 50%;
+  height: 50px;
   padding: 20px;
+}
+
+.selectedEmote{
+  height: 80px;
 }
 
 .graphBuffer {
   height: 300px;
+  text-align: center;
+}
+
+.textBox{
+  padding: 100px;
   text-align: center;
 }
