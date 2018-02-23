@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bliss - Home</title>
+<title>Bliss - Login</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,76 +18,36 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 </head>
 <body>
 
-<!-- Top fixed nav bar -->
 <div id="navbartop">
-
-	<a href="/selectEmote" id="post" styling="margin-right:12px">
-	<img src="icons/postRed.png" class="iconimgtop"></a>
-	
+	<a href="/info" id="info" styling="margin-right:12px">
+	<img src="icons/about.png" class="iconimgtop"></a>
 </div>
 
-<div class = "activeHome">
-		
-	<!-- Iterate through data.json -->
-	
-	{{#each posts}}
-	<div class="post" id="{{id}}">
-		<img src="{{emote}}" class="postEmote">
-		<h5>You were feeling {{mood}} at {{date}}.</h5>
 
-		<!-- If photo is attached -->
-		{{# if photoOn}}
-			<img src ="{{photo}}" class="postPhoto">
-		{{/if}}
+<img src="icons/logo.png" class="loginLogo">
 
-		<!-- If video is attached -->
-		{{# if videoOn}}
-		<video class="postVideo" controls>
-			<source src="{{video}}" type="video/mp4">
-		</video>
-		{{/if}}
+<img src="icons/blankProf.png" id="profilePic" class="profilePic w3-circle">
 
-		<!-- If audio is attached -->
-		{{# if audioOn}}
-		<audio class="postAudio" controls>
-			<source src="{{audio}}" type="audio/mpeg">			
-		</audio>
-		{{/if}}
 
-		<!-- If text is attached -->
-		{{# if textOn}}
-			<object class="postText" 
-			data={{text}}
-			></object>
+<div class = "loginPage" >
+<p class="facebookLogin" id="loginButton">
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+</p>
 
-		{{/if}}
-	
-		<hr>
-	</div>
-	{{/each}}
+<a class="startButton" href="/home" 
+id="startButton">Let's Get Started!</a>
+
+</p>
 </div>
-
-<!-- buffer lines - need to fix -->
-<hr>
-<hr>
-<hr>
-
-
-<!-- Bottom fixed nav bar -->
-<div id="navbarbot">
-	<a href="/graph"><img src="icons/dataGrey.png"
-	class="iconimgbot"></a>
-	<a href=""><img src="icons/homeRed.png"
-	class="iconimgbot"</a>
-	<a href="/happy"><img src="icons/happyGrey.png"
-	class="iconimgbot"</a>
-</div>
-
 
 <script src="/js/jquery-1.11.0.js"></script>
 <script src="/js/bootstrap.js"></script>
 <script src="/js/bootstrap.min.js"></script>
+<script src="/js/login.js"></script>
 <script src="/js/project.js"></script>
+{{> facebook}}
+<script src="/js/facebook.js"></script>
 
 </body>
 </html>

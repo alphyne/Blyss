@@ -28,6 +28,10 @@
 #navbartop h3 {
   color: #FF2F2F;
 }
+
+#h2 {
+  color: #FF2F2F;
+}
 #navbarbot {
   overflow: hidden;
   background-color: #ffffff;
@@ -174,4 +178,35 @@
 .textBox{
   padding: 100px;
   text-align: center;
+}
+
+.loginPage{
+  text-align: center;
+}
+
+.loginLogo {
+  padding: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profilePic {
+  width: 40%;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a.startButton {
+    background-color: #FF2F2F;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
 }

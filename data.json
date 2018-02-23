@@ -16,51 +16,6 @@
 			"text":""
 		},
 		{
-			"emote": "emotes/happy3.png",
-			"mood": "excited",
-			"category": "happy",
-			"positive": true,
-			"date": "1pm, February 15th",
-			"photoOn": true,
-			"videoOn": false,
-			"audioOn": false,
-			"textOn": false,
-			"photo": "media/photo1.jpg",
-			"video": "",
-			"audio":"",
-			"text":""
-		},
-		{
-			"emote": "emotes/surprised1.png",
-			"mood": "surprised",
-			"category": "surprised",
-			"positive": true,
-			"date": "9am, February 15th",
-			"photoOn": false,
-			"videoOn": true,
-			"audioOn": false,
-			"textOn": false,
-			"photo": "",
-			"video": "media/video1.mp4",
-			"audio":"",
-			"text":""
-		},
-		{
-			"emote": "emotes/angry3.png",
-			"mood": "heated",
-			"category": "angry",
-			"positive": false,
-			"date": "8pm, February 14th",
-			"photoOn": false,
-			"videoOn": false,
-			"audioOn": true,
-			"textOn": false,
-			"photo": "",
-			"video": "",
-			"audio":"media/audio1.mp3",
-			"text":""
-		},
-		{
 			"emote": "emotes/sad1.png",
 			"mood": "sad",
 			"category": "sad",
@@ -76,9 +31,55 @@
 			"text":"media/text1.txt"
 		},
 		{
-			"emote": "emotes/angry1.png",
+			"emote": "emotes/upset3.png",
+			"mood": "heated",
+			"category": "upset",
+			"positive": false,
+			"date": "8pm, February 14th",
+			"photoOn": false,
+			"videoOn": false,
+			"audioOn": true,
+			"textOn": false,
+			"photo": "",
+			"video": "",
+			"audio":"media/audio1.mp3",
+			"text":""
+		},
+		{
+			"emote": "emotes/happy3.png",
+			"mood": "excited",
+			"category": "happy",
+			"positive": true,
+			"date": "1pm, February 15th",
+			"photoOn": true,
+			"videoOn": false,
+			"audioOn": false,
+			"textOn": false,
+			"photo": "media/photo1.jpg",
+			"video": "",
+			"audio":"",
+			"text":""
+		},
+		{
+			"emote": "emotes/loving1.png",
+			"mood": "loving",
+			"category": "loving",
+			"positive": true,
+			"date": "9am, February 15th",
+			"photoOn": false,
+			"videoOn": true,
+			"audioOn": false,
+			"textOn": false,
+			"photo": "",
+			"video": "media/video1.mp4",
+			"audio":"",
+			"text":""
+		},
+		
+				{
+			"emote": "emotes/upset1.png",
 			"mood": "mad",
-			"category": "angry",
+			"category": "upset",
 			"positive": false,
 			"date": "2pm, February 13th",
 			"photoOn": false,
@@ -91,9 +92,9 @@
 			"text":""
 		},
 		{
-			"emote": "emotes/surprised1.png",
-			"mood": "surprised",
-			"category": "surprised",
+			"emote": "emotes/anxious1.png",
+			"mood": "anxious",
+			"category": "anxious",
 			"positive": true,
 			"date": "10am, February 13th",
 			"photoOn": false,
@@ -106,9 +107,9 @@
 			"text":""
 		},
 		{
-			"emote": "emotes/nervous3.png",
+			"emote": "emotes/anxious3.png",
 			"mood": "nervous",
-			"category": "nervous",
+			"category": "anxious",
 			"positive": false,
 			"date": "8am, February 13th",
 			"photoOn": false,
@@ -136,9 +137,9 @@
 			"text":""
 		},
 		{
-			"emote": "emotes/sick3.png",
-			"mood": "sick",
-			"category": "sick",
+			"emote": "emotes/relaxed3.png",
+			"mood": "chill",
+			"category": "relaxed",
 			"positive": false,
 			"date": "12pm, February 12th",
 			"photoOn": false,
@@ -166,9 +167,9 @@
 			"text":""
 		},
 		{
-			"emote": "emotes/angry2.png",
+			"emote": "emotes/upset2.png",
 			"mood": "angry",
-			"category": "angry",
+			"category": "upset",
 			"positive": false,
 			"date": "5pm, February 11th",
 			"photoOn": false,
@@ -184,11 +185,11 @@
 
 	"emotes":[
 		{
-			"angry": {
-				"emote1": "emotes/angry1.png",
-				"emote2": "emotes/angry2.png",
-				"emote3": "emotes/angry3.png",
-				"emote4": "emotes/angry4.png"
+			"anxious": {
+				"emote1": "emotes/anxious1.png",
+				"emote2": "emotes/anxious2.png",
+				"emote3": "emotes/anxious3.png",
+				"emote4": "emotes/anxious4.png"
 			},
 			"happy":{
 				"emote1": "emotes/happy1.png",
@@ -196,17 +197,17 @@
 				"emote3": "emotes/happy3.png",
 				"emote4": "emotes/happy4.png"
 			},
-			"annoyed": {
-				"emote1": "emotes/annoyed1.png",
-				"emote2": "emotes/annoyed2.png",
-				"emote3": "emotes/annoyed3.png",
-				"emote4": "emotes/annoyed4.png"
+			"upset": {
+				"emote1": "emotes/upset1.png",
+				"emote2": "emotes/upset2.png",
+				"emote3": "emotes/upset3.png",
+				"emote4": "emotes/upset4.png"
 			},
-			"nervous":{
-				"emote1": "emotes/nervous1.png",
-				"emote2": "emotes/nervous2.png",
-				"emote3": "emotes/nervous3.png",
-				"emote4": "emotes/nervous4.png"
+			"loving":{
+				"emote1": "emotes/loving1.png",
+				"emote2": "emotes/loving2.png",
+				"emote3": "emotes/loving3.png",
+				"emote4": "emotes/loving4.png"
 			},
 			"sad":{
 				"emote1": "emotes/sad1.png",
@@ -214,24 +215,13 @@
 				"emote3": "emotes/sad3.png",
 				"emote4": "emotes/sad4.png"
 			},
-			"sick":{
-				"emote1": "emotes/sick1.png",
-				"emote2": "emotes/sick2.png",
-				"emote3": "emotes/sick3.png",
-				"emote4": "emotes/sick4.png"
-			},
-			"surprised":{
-				"emote1": "emotes/surprised1.png",
-				"emote2": "emotes/surprised2.png",
-				"emote3": "emotes/surprised3.png",
-				"emote4": "emotes/surprised4.png"
-			},
-			"tired":{
-				"emote1": "emotes/tired1.png",
-				"emote2": "emotes/tired2.png",
-				"emote3": "emotes/tired3.png",
-				"emote4": "emotes/tired4.png"
+			"relaxed":{
+				"emote1": "emotes/relaxed1.png",
+				"emote2": "emotes/relaxed2.png",
+				"emote3": "emotes/relaxed3.png",
+				"emote4": "emotes/relaxed4.png"
 			}
+			
 		}
 	]
 }

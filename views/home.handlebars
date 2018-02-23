@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bliss - What Makes You Happy?</title>
+<title>Bliss - Home</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,10 +20,11 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 
 <!-- Top fixed nav bar -->
 <div id="navbartop">
-<h3> What makes you happy? </h3>
-</div>
 
-<!-- buffer lines - need to fix ->
+	<a href="/selectEmote" id="post" styling="margin-right:12px">
+	<img src="icons/postRed.png" class="iconimgtop"></a>
+	
+</div>
 
 <div class = "activeHome">
 		
@@ -31,15 +32,9 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 	
 	{{#each posts}}
 	<div class="post" id="{{id}}">
-		
-		<!-- If positive post -->
-		{{#if positive}}
-
 		<img src="{{emote}}" class="postEmote">
 		<h5>You were feeling {{mood}} at {{date}}.</h5>
 
-
-		<!-- If media is attached -->
 		<!-- If photo is attached -->
 		{{# if photoOn}}
 			<img src ="{{photo}}" class="postPhoto">
@@ -66,14 +61,8 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 			></object>
 
 		{{/if}}
-
-		<!-- End if media -->
-
+	
 		<hr>
-		{{/if}}
-		
-		<!-- End if positive -->
-
 	</div>
 	{{/each}}
 </div>
@@ -88,9 +77,9 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 <div id="navbarbot">
 	<a href="/graph"><img src="icons/dataGrey.png"
 	class="iconimgbot"></a>
-	<a href="/home"><img src="icons/homeGrey.png"
+	<a href=""><img src="icons/homeRed.png"
 	class="iconimgbot"</a>
-	<a href=""><img src="icons/happyRed.png"
+	<a href="/happy"><img src="icons/happyGrey.png"
 	class="iconimgbot"</a>
 </div>
 
