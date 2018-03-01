@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bliss - Home</title>
+<title>Bliss - What Makes You Happy?</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,21 +19,24 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 
 <!-- Top fixed nav bar -->
 <div id="navbartop">
-
-	<a href="/selectEmote" id="post" styling="margin-right:12px">
-	<img src="icons/postRed.png" class="iconimgtop"></a>
-	
+<button class="tablink" onclick="openCity('Positive', this, 'green')" id="defaultOpen">Positive</button>
+<button class="tablink" onclick="openCity('Negative', this, 'red')">Negative</button>
 </div>
 
-<div class = "activeHome">
-		
-	<!-- Iterate through data.json -->
-	
-	{{#each posts}}
+<div id="Positive" class="tabcontent">
+  <h3>Your Positive Posts</h3>
+  
+ <p>{{#each posts}}
 	<div class="post" id="{{id}}">
+		
+		<!-- If positive post -->
+		{{#if positive}}
+
 		<img src="{{emote}}" class="postEmote">
 		<h5>You were feeling {{mood}} at {{date}}.</h5>
 
+
+		<!-- If media is attached -->
 		<!-- If photo is attached -->
 		{{# if photoOn}}
 			<img src ="{{photo}}" class="postPhoto">
@@ -61,25 +63,82 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 			></object>
 
 		{{/if}}
-	
+
+		<!-- End if media -->
+
 		<hr>
+		{{/if}}
+		
+		<!-- End if positive -->
+
 	</div>
-	{{/each}}
+	{{/each}}</p>
 </div>
 
-<!-- buffer lines - need to fix -->
-<hr>
-<hr>
-<hr>
+
+
+<div id="Negative" class="tabcontent">
+  <h3>Your Negative Posts</h3>
+  <p>{{#each posts}}
+	<div class="post" id="{{id}}">
+		
+		<!-- If positive post -->
+		{{#if positive}}
+
+		{{else}}
+		<img src="{{emote}}" class="postEmote">
+		<h5>You were feeling {{mood}} at {{date}}.</h5>
+
+
+		<!-- If media is attached -->
+		<!-- If photo is attached -->
+		{{# if photoOn}}
+			<img src ="{{photo}}" class="postPhoto">
+		{{/if}}
+
+		<!-- If video is attached -->
+		{{# if videoOn}}
+		<video class="postVideo" controls>
+			<source src="{{video}}" type="video/mp4">
+		</video>
+		{{/if}}
+
+		<!-- If audio is attached -->
+		{{# if audioOn}}
+		<audio class="postAudio" controls>
+			<source src="{{audio}}" type="audio/mpeg">			
+		</audio>
+		{{/if}}
+
+		<!-- If text is attached -->
+		{{# if textOn}}
+			<object class="postText" 
+			data={{text}}
+			></object>
+
+		{{/if}}
+
+		<!-- End if media -->
+
+		<hr>
+		{{/if}}
+		
+		<!-- End if positive -->
+
+	</div>
+	{{/each}}</p> 
+</div>
+
+
 
 
 <!-- Bottom fixed nav bar -->
 <div id="navbarbot">
 	<a href="/graph"><img src="icons/dataGrey.png"
 	class="iconimgbot"></a>
-	<a href=""><img src="icons/homeRed.png"
+	<a href="/home"><img src="icons/homeGrey.png"
 	class="iconimgbot"</a>
-	<a href="/happy_A"><img src="icons/happyGrey.png"
+	<a href=""><img src="icons/happyRed.png"
 	class="iconimgbot"</a>
 </div>
 
@@ -87,7 +146,7 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 <script src="/js/jquery-1.11.0.js"></script>
 <script src="/js/bootstrap.js"></script>
 <script src="/js/bootstrap.min.js"></script>
-<script src="/js/project.js"></script>
+<script src="/js/happy_B.js"></script>
 
 </body>
 </html>

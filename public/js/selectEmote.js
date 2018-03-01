@@ -16,6 +16,3 @@ function myFunction() {
   }
 }
 
-$('input:button').click(function(){
-	alert($(this.val());
-});

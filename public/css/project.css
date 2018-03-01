@@ -154,6 +154,11 @@
     display: table;
 }
 
+.emoteButton {
+    width: 23%;
+    display: inline-block;
+}
+
 /* Add a background color on hover */
 .btn-group button:hover {
     background-color: #FFEDED;
@@ -210,3 +215,37 @@ a.startButton {
     font-size: 16px;
     margin: 4px 2px;
 }
+
+/** Start happy_B styling */
+
+/* Style the tab buttons */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 22px 30px;
+    font-size: 17px;
+    width: 50%;
+}
+
+/* Change background color of buttons on hover */
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Set default styles for tab content */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Style each tab content individually */ 
+#Positive {background-color:#90EE90;}
+#Negative {background-color:#ff6666;}
+
+/** End happy_B styling */

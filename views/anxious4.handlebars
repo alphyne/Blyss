@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bliss - Home</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="/css/bootstrap-theme.css" rel="stylesheet">
+<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/project.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+input[type=text]{
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius:4px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Top fixed nav bar -->
+<div id="navbartop">
+
+	<a class="submit-button" href="/home">Submit</a>
+	<a href="">Make Post</a>
+	<a href="/home">Cancel</a>
+
+</div>
+<!--
+<div class="topBuffer"></div>
+-->
+<div class = "activeHome">
+	
+	<!-- Iterate through data.json -->
+	<div class="selectedEmoteContainer">
+	<h1><img src="emotes/anxious4.png" class="selectedEmote">
+	</h1>
+	
+	<h4><a href="/selectEmote">Change emote</a>
+	</h4>
+	</div>
+
+<div class ="textBox">
+
+<hr>
+<h6>I'm feeling...</h6>
+<form>
+  <label for="mood"></label>
+  <input type="text" id="mood" name="mood">
+
+</div>
+
+</div>
+
+
+<script src="/js/jquery-1.11.0.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/topNavOnly.js"></script>
+<script src="/js/happy1.js"></script>
+
+</body>
+</html>
