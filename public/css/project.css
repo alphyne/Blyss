@@ -249,3 +249,35 @@ a.startButton {
 #Negative {background-color:#ff6666;}
 
 /** End happy_B styling */
+
+/** Start happy_A styling */
+
+/* Style the tab buttons */
+.tablinkA {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 16.66%;
+    height: 60px;
+}
+
+/* Change background color of buttons on hover */
+.tablinkA:hover {
+    background-color: #777;
+}
+
+/* Set default styles for tab content */
+.tabcontentA {
+    display: none;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Style each tab content individually */ 
+#PositiveA {background-color:#90EE90;}
+#NegativeA {background-color:#ff6666;}
+
+/** End happy_B styling */
