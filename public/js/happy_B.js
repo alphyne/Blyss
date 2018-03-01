@@ -34,13 +34,13 @@ function myFunction() {
 function openCity(cityName, elmnt, color) {
     // Hide all elements with class="tabcontent" by default */
     var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
+    tabcontent = document.getElementsByClassName("tabcontentB");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
 
     // Remove the background color of all tablinks/buttons
-    tablinks = document.getElementsByClassName("tablink");
+    tablinks = document.getElementsByClassName("tablinkB");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].style.backgroundColor = "";
     }

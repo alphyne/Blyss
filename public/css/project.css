@@ -101,7 +101,9 @@
 }
 
 .activeHome{
+  text-align: center;
 }
+
 
 .postEmote {
   height: 30px;
@@ -216,10 +218,10 @@ a.startButton {
     margin: 4px 2px;
 }
 
-/** Start happy_B styling */
+/** Start happy_C styling */
 
 /* Style the tab buttons */
-.tablink {
+.tablinkC {
     background-color: #555;
     color: white;
     float: left;
@@ -232,12 +234,12 @@ a.startButton {
 }
 
 /* Change background color of buttons on hover */
-.tablink:hover {
+.tablinkC:hover {
     background-color: #777;
 }
 
 /* Set default styles for tab content */
-.tabcontent {
+.tabcontentC {
     color: white;
     display: none;
     padding: 50px;
@@ -248,12 +250,12 @@ a.startButton {
 #Positive {background-color:#90EE90;}
 #Negative {background-color:#ff6666;}
 
-/** End happy_B styling */
+/** End happy_C styling */
 
-/** Start happy_A styling */
+/** Start happy_B styling */
 
 /* Style the tab buttons */
-.tablinkA {
+.tablinkB {
     background-color: #555;
     color: white;
     float: left;
@@ -265,19 +267,19 @@ a.startButton {
 }
 
 /* Change background color of buttons on hover */
-.tablinkA:hover {
+.tablinkB:hover {
     background-color: #777;
 }
 
 /* Set default styles for tab content */
-.tabcontentA {
+.tabcontentB {
     display: none;
     padding: 50px;
     text-align: center;
 }
 
 /* Style each tab content individually */ 
-#PositiveA {background-color:#90EE90;}
-#NegativeA {background-color:#ff6666;}
+#PositiveB {background-color:#90EE90;}
+#NegativeB {background-color:#ff6666;}
 
 /** End happy_B styling */

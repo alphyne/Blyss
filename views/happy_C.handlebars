@@ -17,17 +17,22 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 </head>
 <body>
 
-	<div class = "activeHome"> 
-<h3>Your Happy Posts</h3>
-	</div>
+<!-- Top fixed nav bar -->
+<div id="navbartop">
+<button class="tablinkC" onclick="openCity('Positive', this, 'green')" id="defaultOpen">Positive</button>
+<button class="tablinkC" onclick="openCity('Negative', this, 'red')">Negative</button>
+</div>
 
+<div id="Positive" class="tabcontentC">
+  <h3>Your Positive Posts</h3>
+  
  <p>{{#each posts}}
 	<div class="post" id="{{id}}">
 		
 		<!-- If positive post -->
-		{{#if happy}}
+		{{#if positive}}
 
-		<img src="{{emote}}" class="postEmote"></img>
+		<img src="{{emote}}" class="postEmote">
 		<h5>You were feeling {{mood}} at {{date}}.</h5>
 
 
@@ -71,6 +76,62 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 </div>
 
 
+
+<div id="Negative" class="tabcontentC">
+  <h3>Your Negative Posts</h3>
+  <p>{{#each posts}}
+	<div class="post" id="{{id}}">
+		
+		<!-- If positive post -->
+		{{#if positive}}
+
+		{{else}}
+		<img src="{{emote}}" class="postEmote">
+		<h5>You were feeling {{mood}} at {{date}}.</h5>
+
+
+		<!-- If media is attached -->
+		<!-- If photo is attached -->
+		{{# if photoOn}}
+			<img src ="{{photo}}" class="postPhoto">
+		{{/if}}
+
+		<!-- If video is attached -->
+		{{# if videoOn}}
+		<video class="postVideo" controls>
+			<source src="{{video}}" type="video/mp4">
+		</video>
+		{{/if}}
+
+		<!-- If audio is attached -->
+		{{# if audioOn}}
+		<audio class="postAudio" controls>
+			<source src="{{audio}}" type="audio/mpeg">			
+		</audio>
+		{{/if}}
+
+		<!-- If text is attached -->
+		{{# if textOn}}
+			<object class="postText" 
+			data={{text}}
+			></object>
+
+		{{/if}}
+
+		<!-- End if media -->
+
+		<hr>
+		{{/if}}
+		
+		<!-- End if positive -->
+
+	</div>
+	{{/each}}</p> 
+</div>
+
+
+
+
 <!-- Bottom fixed nav bar -->
 <div id="navbarbot">
 	<a href="/graph"><img src="icons/dataGrey.png"
@@ -85,7 +146,7 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 <script src="/js/jquery-1.11.0.js"></script>
 <script src="/js/bootstrap.js"></script>
 <script src="/js/bootstrap.min.js"></script>
-<script src="/js/project.js"></script>
+<script src="/js/happy_C.js"></script>
 
 </body>
 </html>

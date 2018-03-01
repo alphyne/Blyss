@@ -19,20 +19,31 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 
 <!-- Top fixed nav bar -->
 <div id="navbartop">
-<button class="tablink" onclick="openCity('Positive', this, 'green')" id="defaultOpen">Positive</button>
-<button class="tablink" onclick="openCity('Negative', this, 'red')">Negative</button>
+<button class="tablinkB" onclick="openCity('Happy', this, 'green')"
+			 id="defaultOpen"><img class="iconimgtop" 
+			 src="/emotes/happy4.png"></button>
+<button class="tablinkB" onclick="openCity('Loving', this, 'green')"><img class="iconimgtop" 
+			 src="/emotes/loving1.png"></button>
+<button class="tablinkB" onclick="openCity('Relaxed', this, 'green')"><img class="iconimgtop" 
+			 src="/emotes/relaxed4.png"></button>
+<button class="tablinkB" onclick="openCity('Sad', this, 'green')"><img class="iconimgtop" 
+			 src="/emotes/sad1.png"></button>
+<button class="tablinkB" onclick="openCity('Upset', this, 'green')"><img class="iconimgtop" 
+			 src="/emotes/upset1.png"></button>
+<button class="tablinkB" onclick="openCity('Anxious', this, 'green')"><img class="iconimgtop" 
+			 src="/emotes/anxious2.png"></button>
 </div>
 
-<div id="Positive" class="tabcontent">
-  <h3>Your Positive Posts</h3>
-  
+<div id="Happy" class="tabcontentB">
+
+<h3>Your Happy Posts</h3>
  <p>{{#each posts}}
 	<div class="post" id="{{id}}">
 		
 		<!-- If positive post -->
-		{{#if positive}}
+		{{#if happy}}
 
-		<img src="{{emote}}" class="postEmote">
+		<img src="{{emote}}" class="postEmote"></img>
 		<h5>You were feeling {{mood}} at {{date}}.</h5>
 
 
@@ -77,15 +88,14 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 
 
 
-<div id="Negative" class="tabcontent">
-  <h3>Your Negative Posts</h3>
+<div id="Loving" class="tabcontentB">
+  <h3>Your Loving Posts</h3>
   <p>{{#each posts}}
 	<div class="post" id="{{id}}">
 		
 		<!-- If positive post -->
-		{{#if positive}}
+		{{#if loving}}
 
-		{{else}}
 		<img src="{{emote}}" class="postEmote">
 		<h5>You were feeling {{mood}} at {{date}}.</h5>
 
@@ -129,8 +139,209 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 	{{/each}}</p> 
 </div>
 
+<div id="Relaxed" class="tabcontentB">
+  <h3>Your Relaxed Posts</h3>
+  <p>{{#each posts}}
+	<div class="post" id="{{id}}">
+		
+		<!-- If positive post -->
+		{{#if relaxed}}
+
+		<img src="{{emote}}" class="postEmote">
+		<h5>You were feeling {{mood}} at {{date}}.</h5>
 
 
+		<!-- If media is attached -->
+		<!-- If photo is attached -->
+		{{# if photoOn}}
+			<img src ="{{photo}}" class="postPhoto">
+		{{/if}}
+
+		<!-- If video is attached -->
+		{{# if videoOn}}
+		<video class="postVideo" controls>
+			<source src="{{video}}" type="video/mp4">
+		</video>
+		{{/if}}
+
+		<!-- If audio is attached -->
+		{{# if audioOn}}
+		<audio class="postAudio" controls>
+			<source src="{{audio}}" type="audio/mpeg">			
+		</audio>
+		{{/if}}
+
+		<!-- If text is attached -->
+		{{# if textOn}}
+			<object class="postText" 
+			data={{text}}
+			></object>
+
+		{{/if}}
+
+		<!-- End if media -->
+
+		<hr>
+		{{/if}}
+		
+		<!-- End if positive -->
+
+	</div>
+	{{/each}}</p> 
+</div>
+
+<div id="Sad" class="tabcontentB">
+  <h3>Your Sad Posts</h3>
+  <p>{{#each posts}}
+	<div class="post" id="{{id}}">
+		
+		<!-- If positive post -->
+		{{#if sad}}
+
+		<img src="{{emote}}" class="postEmote">
+		<h5>You were feeling {{mood}} at {{date}}.</h5>
+
+
+		<!-- If media is attached -->
+		<!-- If photo is attached -->
+		{{# if photoOn}}
+			<img src ="{{photo}}" class="postPhoto">
+		{{/if}}
+
+		<!-- If video is attached -->
+		{{# if videoOn}}
+		<video class="postVideo" controls>
+			<source src="{{video}}" type="video/mp4">
+		</video>
+		{{/if}}
+
+		<!-- If audio is attached -->
+		{{# if audioOn}}
+		<audio class="postAudio" controls>
+			<source src="{{audio}}" type="audio/mpeg">			
+		</audio>
+		{{/if}}
+
+		<!-- If text is attached -->
+		{{# if textOn}}
+			<object class="postText" 
+			data={{text}}
+			></object>
+
+		{{/if}}
+
+		<!-- End if media -->
+
+		<hr>
+		{{/if}}
+		
+		<!-- End if positive -->
+
+	</div>
+	{{/each}}</p> 
+</div>
+
+<div id="Upset" class="tabcontentB">
+  <h3>Your Upset Posts</h3>
+  <p>{{#each posts}}
+	<div class="post" id="{{id}}">
+		
+		<!-- If positive post -->
+		{{#if upset}}
+
+		<img src="{{emote}}" class="postEmote">
+		<h5>You were feeling {{mood}} at {{date}}.</h5>
+
+
+		<!-- If media is attached -->
+		<!-- If photo is attached -->
+		{{# if photoOn}}
+			<img src ="{{photo}}" class="postPhoto">
+		{{/if}}
+
+		<!-- If video is attached -->
+		{{# if videoOn}}
+		<video class="postVideo" controls>
+			<source src="{{video}}" type="video/mp4">
+		</video>
+		{{/if}}
+
+		<!-- If audio is attached -->
+		{{# if audioOn}}
+		<audio class="postAudio" controls>
+			<source src="{{audio}}" type="audio/mpeg">			
+		</audio>
+		{{/if}}
+
+		<!-- If text is attached -->
+		{{# if textOn}}
+			<object class="postText" 
+			data={{text}}
+			></object>
+
+		{{/if}}
+
+		<!-- End if media -->
+
+		<hr>
+		{{/if}}
+		
+		<!-- End if positive -->
+
+	</div>
+	{{/each}}</p> 
+</div>
+
+<div id="Anxious" class="tabcontentB">
+  <h3>Your Anxious Posts</h3>
+  <p>{{#each posts}}
+	<div class="post" id="{{id}}">
+		
+		<!-- If positive post -->
+		{{#if anxious}}
+
+		<img src="{{emote}}" class="postEmote">
+		<h5>You were feeling {{mood}} at {{date}}.</h5>
+
+
+		<!-- If media is attached -->
+		<!-- If photo is attached -->
+		{{# if photoOn}}
+			<img src ="{{photo}}" class="postPhoto">
+		{{/if}}
+
+		<!-- If video is attached -->
+		{{# if videoOn}}
+		<video class="postVideo" controls>
+			<source src="{{video}}" type="video/mp4">
+		</video>
+		{{/if}}
+
+		<!-- If audio is attached -->
+		{{# if audioOn}}
+		<audio class="postAudio" controls>
+			<source src="{{audio}}" type="audio/mpeg">			
+		</audio>
+		{{/if}}
+
+		<!-- If text is attached -->
+		{{# if textOn}}
+			<object class="postText" 
+			data={{text}}
+			></object>
+
+		{{/if}}
+
+		<!-- End if media -->
+
+		<hr>
+		{{/if}}
+		
+		<!-- End if positive -->
+
+	</div>
+	{{/each}}</p> 
+</div>
 
 <!-- Bottom fixed nav bar -->
 <div id="navbarbot">
