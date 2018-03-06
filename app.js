@@ -12,7 +12,7 @@ var index = require('./routes/index');
 var home = require('./routes/home');
 // Example route
 // var user = require('./routes/user');
-var happy_A = require('./routes/happy_A');
+var posts = require('./routes/posts');
 var graph = require('./routes/graph');
 var selectEmote = require('./routes/selectEmote');
 var makePost = require('./routes/makePost');
@@ -75,12 +75,14 @@ app.get('/', index.view);
 app.get('/home', home.view);
 // Example route
 // app.get('/users', user.list);
-app.get('/happy_A', happy_A.view);
+app.get('/posts', posts.view);
+app.get('/postsAlt', posts.viewAlt);
+
 app.get('/graph', graph.view);
 app.get('/selectEmote', selectEmote.view);
 app.get('/makePost', makePost.view);
 app.get('/info', info.view);
-app.get('/happy_B', happy_B.view);
+app.get('/happy_BAC', happy_B.view);
 
 app.get('/happy1', happy1.view);
 app.get('/happy2', happy2.view);
@@ -111,8 +113,6 @@ app.get('/anxious1', anxious1.view);
 app.get('/anxious2', anxious2.view);
 app.get('/anxious3', anxious3.view);
 app.get('/anxious4', anxious4.view);
-
-
 
 app.post('/happy1-post', happy1.post);
 

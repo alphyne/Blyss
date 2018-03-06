@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Google Analytics Content Experiment code -->
+	<script>function utmx_section(){}function utmx(){}(function(){var
+	k='170257606-1',d=document,l=d.location,c=d.cookie;
+	if(l.search.indexOf('utm_expid='+k)>0)return;
+	function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+	indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+	length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+	'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+	'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+	'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+	valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+	'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+	</script><script>utmx('url','A/B');</script>
+
+
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-115181291-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+	
+	
+<title>Blyss - Posts</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="/css/bootstrap-theme.css" rel="stylesheet">
+<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/project.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+function timer11(){ga('send', 'event', 'TimeOnPage', '1', '11-30 seconds', { 'nonInteraction': 1 });}
+function timer31(){ga('send', 'event', 'TimeOnPage', '2', '31-60 seconds', { 'nonInteraction': 1 });}
+function timer61(){ga('send', 'event', 'TimeOnPage', '3', '61-180 seconds', { 'nonInteraction': 1 });}
+function timer181(){ga('send', 'event', 'TimeOnPage', '4', '181-600 seconds', { 'nonInteraction': 1 });}
+function timer601(){ga('send', 'event', 'TimeOnPage', '5', '601-1800 seconds', { 'nonInteraction': 1 });}
+function timer1801(){ga('send', 'event', 'TimeOnPage', '6', '1801+ seconds', { 'nonInteraction': 1 });}
+ga('send', 'event', 'TimeOnPage', '0', '0-10 seconds', { 'nonInteraction': 1 });
+setTimeout(timer11,11000);
+setTimeout(timer31,31000);
+setTimeout(timer61,61000);
+setTimeout(timer181,181000);
+setTimeout(timer601,601000);
+setTimeout(timer1801,1801000);
+</script>
+
+
+</head>
+<body>
+<!-- Start version B -->
+{{#if viewAlt}}
+
+<!-- Top fixed nav bar -->
+<div id="navbartop">
+<button class="tablinkB" onclick="openCity('Happy', this, '#FFA8A7')"
+			 id="defaultOpen"><img class="iconimgtop" 
+			 src="/emotes/happy4.png"></button>
+<button class="tablinkB" onclick="openCity('Loving', this, '#FFA8A7')"><img class="iconimgtop" 
+			 src="/emotes/loving1.png"></button>
+<button class="tablinkB" onclick="openCity('Relaxed', this, '#FFA8A7')"><img class="iconimgtop" 
+			 src="/emotes/relaxed4.png"></button>
+<button class="tablinkB" onclick="openCity('Sad', this, '#FFA8A7')"><img class="iconimgtop" 
+			 src="/emotes/sad1.png"></button>
+<button class="tablinkB" onclick="openCity('Upset', this, '#FFA8A7')"><img class="iconimgtop" 
+			 src="/emotes/upset1.png"></button>
+<button class="tablinkB" onclick="openCity('Anxious', this, '#FFA8A7')"><img class="iconimgtop" 
+			 src="/emotes/anxious2.png"></button>
+</div>
+
+<div id="Happy" class="tabcontentB">
+
+<h3>Your Happy Posts</h3>
+ <p>{{#each posts}}
+	
+ 	<!-- If positive post -->
+	{{#if happy}} 
+ 	<div class="post" id="{{id}}">
+		
+		<img src="{{emote}}" class="postEmote"></img>
+		<h5>You were feeling {{mood}} at {{date}}.</h5>
+
+
+		<!-- If media is attached -->
+		<!-- If photo is attached -->
+		{{# if photoOn}}
+			<img src ="{{photo}}" class="postPhoto">
+		{{/if}}
+
+		<!-- If video is attached -->
+		{{# if videoOn}}
+		<video class="postVideo" controls>
+			<source src="{{video}}" type="video/mp4">
+		</video>
+		{{/if}}
+
+		<!-- If audio is attached -->
+		{{# if audioOn}}
+		<audio class="postAudio" controls>
+			<source src="{{audio}}" type="audio/mpeg">			
+		</audio>
+		{{/if}}
+
+		<!-- If text is attached -->
+		{{# if textOn}}
+			<object class="postText" 
+			data={{text}}
+			></object>
+		{{/if}}
+		<!-- End if media -->
+
+		<hr>
+		</div>
+	{{/if}}
+		
+		<!-- End if positive -->	
+{{/each}}</p>
+</div>
+
+
+
+<div id="Loving" class="tabcontentB">
+  <h3>Your Loving Posts</h3>
+  <p>{{#each posts}}
+	<!-- If positive post -->
+	{{#if loving}}
+
+  	<div class="post" id="{{id}}">
+		<img src="{{emote}}" class="postEmote">
+		<h5>You were feeling {{mood}} at {{date}}.</h5>
+		<!-- If media is attached -->
+		<!-- If photo is attached -->
+		{{# if photoOn}}
+			<img src ="{{photo}}" class="postPhoto">
+		{{/if}}
+
+		<!-- If video is attached -->
+		{{# if videoOn}}
+		<video class="postVideo" controls>
+			<source src="{{video}}" type="video/mp4">
+		</video>
+		{{/if}}
+
+		<!-- If audio is attached -->
+		{{# if audioOn}}
+		<audio class="postAudio" controls>
+			<source src="{{audio}}" type="audio/mpeg">			
+		</audio>
+		{{/if}}
+
+		<!-- If text is attached -->
+		{{# if textOn}}
+			<object class="postText" 
+			data={{text}}
+			></object>
+
+		{{/if}}
+
+		<!-- End if media -->
+
+		<hr>	
+		<!-- End if positive -->
+
+	</div>
+
+	{{/if}}
+		
+	<!-- End if positive -->
+
+
+
+	{{/each}}</p> 
+</div>
+
+<div id="Relaxed" class="tabcontentB">
+  <h3>Your Relaxed Posts</h3>
+  <p>{{#each posts}}
+	
+  	<!-- If positive post -->
+	{{#if relaxed}}
+  
+  	<div class="post" id="{{id}}">
+	
+		<img src="{{emote}}" class="postEmote">
+		<h5>You were feeling {{mood}} at {{date}}.</h5>
+
+
+		<!-- If media is attached -->
+		<!-- If photo is attached -->
+		{{# if photoOn}}
+			<img src ="{{photo}}" class="postPhoto">
+		{{/if}}
+
+		<!-- If video is attached -->
+		{{# if videoOn}}
+		<video class="postVideo" controls>
+			<source src="{{video}}" type="video/mp4">
+		</video>
+		{{/if}}
+
+		<!-- If audio is attached -->
+		{{# if audioOn}}
+		<audio class="postAudio" controls>
+			<source src="{{audio}}" type="audio/mpeg">			
+		</audio>
+		{{/if}}
+
+		<!-- If text is attached -->
+		{{# if textOn}}
+			<object class="postText" 
+			data={{text}}
+			></object>
+
+		{{/if}}
+
+		<!-- End if media -->
+
+		<hr>
+		
+		<!-- End if positive -->
+
+	</div>
+	{{/if}}
+		
+	<!-- End if positive -->
+	{{/each}}</p> 
+</div>
+
+<div id="Sad" class="tabcontentB">
+  <h3>Your Sad Posts</h3>
+  <p>{{#each posts}}
+  	
+  	<!-- If sad post -->
+  	{{#if sad}}
+	<div class="post" id="{{id}}">
+		
+
+		<img src="{{emote}}" class="postEmote">
+		<h5>You were feeling {{mood}} at {{date}}.</h5>
+
+
+		<!-- If media is attached -->
+		<!-- If photo is attached -->
+		{{# if photoOn}}
+			<img src ="{{photo}}" class="postPhoto">
+		{{/if}}
+
+		<!-- If video is attached -->
+		{{# if videoOn}}
+		<video class="postVideo" controls>
+			<source src="{{video}}" type="video/mp4">
+		</video>
+		{{/if}}
+
+		<!-- If audio is attached -->
+		{{# if audioOn}}
+		<audio class="postAudio" controls>
+			<source src="{{audio}}" type="audio/mpeg">			
+		</audio>
+		{{/if}}
+
+		<!-- If text is attached -->
+		{{# if textOn}}
+			<object class="postText" 
+			data={{text}}
+			></object>
+
+		{{/if}}
+
+		<!-- End if media -->
+
+		<hr>
+		
+
+	</div>
+
+	{{/if}}
+	<!-- End if sad -->
+
+	{{/each}}</p> 
+</div>
+
+<div id="Upset" class="tabcontentB">
+  <h3>Your Upset Posts</h3>
+  <p>{{#each posts}}
+	
+  	<!-- If positive post -->
+	{{#if upset}}
+  
+  	<div class="post" id="{{id}}">
+		
+		<img src="{{emote}}" class="postEmote">
+		<h5>You were feeling {{mood}} at {{date}}.</h5>
+
+
+		<!-- If media is attached -->
+		<!-- If photo is attached -->
+		{{# if photoOn}}
+			<img src ="{{photo}}" class="postPhoto">
+		{{/if}}
+
+		<!-- If video is attached -->
+		{{# if videoOn}}
+		<video class="postVideo" controls>
+			<source src="{{video}}" type="video/mp4">
+		</video>
+		{{/if}}
+
+		<!-- If audio is attached -->
+		{{# if audioOn}}
+		<audio class="postAudio" controls>
+			<source src="{{audio}}" type="audio/mpeg">			
+		</audio>
+		{{/if}}
+
+		<!-- If text is attached -->
+		{{# if textOn}}
+			<object class="postText" 
+			data={{text}}
+			></object>
+
+		{{/if}}
+
+		<!-- End if media -->
+
+		<hr>
+		
+		<!-- End if positive -->
+
+	</div>
+
+	{{/if}}
+		
+	<!-- End if positive -->
+
+	{{/each}}</p> 
+</div>
+
+<div id="Anxious" class="tabcontentB">
+  <h3>Your Anxious Posts</h3>
+  <p>{{#each posts}}
+	  
+	<!-- If positive post -->
+	{{#if anxious}}
+  	
+	<div class="post" id="{{id}}">
+		
+
+		<img src="{{emote}}" class="postEmote">
+		<h5>You were feeling {{mood}} at {{date}}.</h5>
+
+
+		<!-- If media is attached -->
+		<!-- If photo is attached -->
+		{{# if photoOn}}
+			<img src ="{{photo}}" class="postPhoto">
+		{{/if}}
+
+		<!-- If video is attached -->
+		{{# if videoOn}}
+		<video class="postVideo" controls>
+			<source src="{{video}}" type="video/mp4">
+		</video>
+		{{/if}}
+
+		<!-- If audio is attached -->
+		{{# if audioOn}}
+		<audio class="postAudio" controls>
+			<source src="{{audio}}" type="audio/mpeg">			
+		</audio>
+		{{/if}}
+
+		<!-- If text is attached -->
+		{{# if textOn}}
+			<object class="postText" 
+			data={{text}}
+			></object>
+
+		{{/if}}
+
+		<!-- End if media -->
+
+		<hr>
+		</div>
+
+	{{/if}}
+		
+	<!-- End if positive -->
+
+	{{/each}}</p> 
+</div>
+
+<div class="bufferBot"></div>
+
+
+<!-- End version B / Start version A -->
+{{else}}
+<div id="navbartop">	
+</div>
+
+	
+<div class = "activeHome"> 
+<h3>Your Happy Posts</h3>
+	</div>
+
+ <p>{{#each posts}}
+	<div class="post" id="{{id}}">
+		
+		<!-- If positive post -->
+		{{#if positive}}
+
+		<img src="{{emote}}" class="postEmote"></img>
+		<h5>You were feeling {{mood}} at {{date}}.</h5>
+
+
+		<!-- If media is attached -->
+		<!-- If photo is attached -->
+		{{# if photoOn}}
+			<img src ="{{photo}}" class="postPhoto">
+		{{/if}}
+
+		<!-- If video is attached -->
+		{{# if videoOn}}
+		<video class="postVideo" controls>
+			<source src="{{video}}" type="video/mp4">
+		</video>
+		{{/if}}
+
+		<!-- If audio is attached -->
+		{{# if audioOn}}
+		<audio class="postAudio" controls>
+			<source src="{{audio}}" type="audio/mpeg">			
+		</audio>
+		{{/if}}
+
+		<!-- If text is attached -->
+		{{# if textOn}}
+			<object class="postText" 
+			data={{text}}
+			></object>
+
+		{{/if}}
+
+		<!-- End if media -->
+
+		<hr>
+		{{/if}}
+		
+		<!-- End if positive -->
+
+	</div>
+	{{/each}}</p>
+</div>
+
+<div class="bufferBot"></div>
+{{/if}
+<!-- End version A -->
+
+<!-- Bottom fixed nav bar -->
+<div id="navbarbot">
+	<a href="/graph"><img src="icons/dataGrey.png"
+	class="iconimgbot"></a>
+	<a href="/home"><img src="icons/homeGrey.png"
+	class="iconimgbot"</a>
+	<a href=""><img src="icons/happyRed.png"
+	class="iconimgbot"</a>
+</div>
+
+
+<script src="/js/jquery-1.11.0.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/project.js"></script>
+<script src="/js/happy_B.js"></script>
+
+</body>
+</html>
