@@ -3,6 +3,15 @@
 	margin-top: 2em
 }
 
+.mediaIcon {
+  height: 27px;
+  padding-left: 10px;
+}
+
+.mediaRow {
+  padding-left: 30px;
+}
+
 /* Start sticky navbar */
 /* Style the navbar */
 #navbartop {
@@ -86,6 +95,12 @@
   text-align: right;
 }
 
+
+
+.bufferBot {
+  height:120px;
+}
+
 .logoTop {
   height: 55px;
 }
@@ -132,13 +147,13 @@
 
 .emoteRow {
   text-align: center;
-  height: 125px;
+  height: 120px;
   padding: 23px;
   width: 100%;
 }
 
 .selectEmote {
-  height: 38px;
+  height: 45px;
 }
 
 /* button group css */
@@ -175,7 +190,7 @@
 /* Make Post page */
 .selectedEmoteContainer {
   text-align: center;
-  height: 50px;
+  height: 125px;
   padding: 20px;
 }
 
@@ -189,7 +204,7 @@
 }
 
 .textBox{
-  padding: 100px;
+  padding-top: 30px;
   text-align: center;
 }
 
@@ -262,7 +277,7 @@ a.startButton {
 
 /* Style the tab buttons */
 .tablinkB {
-    background-color: #E4E4E4;
+    background-color: #F9F9F9;
     color: white;
     float: left;
     border: none;
@@ -283,6 +298,10 @@ a.startButton {
     text-align: center;
 }
 
+.tabcontentB h3 {
+  color: #FF2F2F;
+}
+
 /* Style each tab content individually */ 
 #PositiveB {background-color:#FFA8A7;}
 #NegativeB {background-color:#E4E4E4;}
@@ -298,7 +317,7 @@ a.startButton {
 
 /* Style the tab buttons */
 .tablinkGraph {
-    background-color: #E4E4E4;
+    background-color: #F9F9F9;
     float: left;
     border: none;
     outline: none;

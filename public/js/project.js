@@ -14,7 +14,7 @@ var navbarbot = document.getElementById("navbarbot");
 var stickybot = navbartop.offsetTop;
 
 var windowHeight = $(window).height();
-var botOffset = windowHeight - 48;
+var botOffset = windowHeight - 70;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
