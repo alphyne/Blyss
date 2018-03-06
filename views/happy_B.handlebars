@@ -53,11 +53,11 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 
 <h3>Your Happy Posts</h3>
  <p>{{#each posts}}
-	<div class="post" id="{{id}}">
+	
+ 	<!-- If positive post -->
+	{{#if happy}} 
+ 	<div class="post" id="{{id}}">
 		
-		<!-- If positive post -->
-		{{#if happy}}
-
 		<img src="{{emote}}" class="postEmote"></img>
 		<h5>You were feeling {{mood}} at {{date}}.</h5>
 
@@ -87,18 +87,15 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 			<object class="postText" 
 			data={{text}}
 			></object>
-
 		{{/if}}
-
 		<!-- End if media -->
 
 		<hr>
-		{{/if}}
+		</div>
+	{{/if}}
 		
-		<!-- End if positive -->
-
-	</div>
-	{{/each}}</p>
+		<!-- End if positive -->	
+{{/each}}</p>
 </div>
 
 
@@ -106,15 +103,12 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 <div id="Loving" class="tabcontentB">
   <h3>Your Loving Posts</h3>
   <p>{{#each posts}}
-	<div class="post" id="{{id}}">
-		
-		<!-- If positive post -->
-		{{#if loving}}
+	<!-- If positive post -->
+	{{#if loving}}
 
+  	<div class="post" id="{{id}}">
 		<img src="{{emote}}" class="postEmote">
 		<h5>You were feeling {{mood}} at {{date}}.</h5>
-
-
 		<!-- If media is attached -->
 		<!-- If photo is attached -->
 		{{# if photoOn}}
@@ -145,23 +139,29 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 
 		<!-- End if media -->
 
-		<hr>
-		{{/if}}
-		
+		<hr>	
 		<!-- End if positive -->
 
 	</div>
+
+	{{/if}}
+		
+	<!-- End if positive -->
+
+
+
 	{{/each}}</p> 
 </div>
 
 <div id="Relaxed" class="tabcontentB">
   <h3>Your Relaxed Posts</h3>
   <p>{{#each posts}}
-	<div class="post" id="{{id}}">
-		
-		<!-- If positive post -->
-		{{#if relaxed}}
-
+	
+  	<!-- If positive post -->
+	{{#if relaxed}}
+  
+  	<div class="post" id="{{id}}">
+	
 		<img src="{{emote}}" class="postEmote">
 		<h5>You were feeling {{mood}} at {{date}}.</h5>
 
@@ -197,21 +197,24 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 		<!-- End if media -->
 
 		<hr>
-		{{/if}}
 		
 		<!-- End if positive -->
 
 	</div>
+	{{/if}}
+		
+	<!-- End if positive -->
 	{{/each}}</p> 
 </div>
 
 <div id="Sad" class="tabcontentB">
   <h3>Your Sad Posts</h3>
   <p>{{#each posts}}
+  	
+  	<!-- If sad post -->
+  	{{#if sad}}
 	<div class="post" id="{{id}}">
 		
-		<!-- If positive post -->
-		{{#if sad}}
 
 		<img src="{{emote}}" class="postEmote">
 		<h5>You were feeling {{mood}} at {{date}}.</h5>
@@ -248,22 +251,25 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 		<!-- End if media -->
 
 		<hr>
-		{{/if}}
 		
-		<!-- End if positive -->
 
 	</div>
+
+	{{/if}}
+	<!-- End if sad -->
+
 	{{/each}}</p> 
 </div>
 
 <div id="Upset" class="tabcontentB">
   <h3>Your Upset Posts</h3>
   <p>{{#each posts}}
-	<div class="post" id="{{id}}">
+	
+  	<!-- If positive post -->
+	{{#if upset}}
+  
+  	<div class="post" id="{{id}}">
 		
-		<!-- If positive post -->
-		{{#if upset}}
-
 		<img src="{{emote}}" class="postEmote">
 		<h5>You were feeling {{mood}} at {{date}}.</h5>
 
@@ -299,21 +305,27 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 		<!-- End if media -->
 
 		<hr>
-		{{/if}}
 		
 		<!-- End if positive -->
 
 	</div>
+
+	{{/if}}
+		
+	<!-- End if positive -->
+
 	{{/each}}</p> 
 </div>
 
 <div id="Anxious" class="tabcontentB">
   <h3>Your Anxious Posts</h3>
   <p>{{#each posts}}
+	  
+	<!-- If positive post -->
+	{{#if anxious}}
+  	
 	<div class="post" id="{{id}}">
 		
-		<!-- If positive post -->
-		{{#if anxious}}
 
 		<img src="{{emote}}" class="postEmote">
 		<h5>You were feeling {{mood}} at {{date}}.</h5>
@@ -350,11 +362,12 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 		<!-- End if media -->
 
 		<hr>
-		{{/if}}
-		
-		<!-- End if positive -->
+		</div>
 
-	</div>
+	{{/if}}
+		
+	<!-- End if positive -->
+
 	{{/each}}</p> 
 </div>
 

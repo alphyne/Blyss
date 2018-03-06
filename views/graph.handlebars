@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bliss - Graph</title>
+<title>Blyss - Graph</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -30,11 +30,12 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
   var data = google.visualization.arrayToDataTable([
   ['Task', 'Hours per Day'],
-  ['Happy', 8],
-  ['Angry', 2],
-  ['Surprised', 4],
-  ['Nervous', 2],
-  ['Sad', 8]
+  ['Sad', 9],
+  ['Upset', 3],
+  ['Happy', 5],
+  ['Anxious', 2],
+  ['Loving', 4],
+  ['Relaxed', 6]
 ]);
 
   // Optional; add a title and set the width and height of the chart
@@ -42,7 +43,7 @@ function drawChart() {
 	  pieHole: 0.3, 
 	  'legend': 'bottom',
 	  'height': 350,	  
-
+	
 	  };
 
   // Display the chart inside the <div> element with id="piechart"
@@ -52,43 +53,91 @@ function drawChart() {
 </script>
 
 
-
-
 <!-- End graph -->
 </head>
 <body>
 
-
-
-
-<!-- Top fixed nav bar -->
 <div id="navbartop">
-
-<h3>My Mood Chart</h3>
+<button class="tablinkGraph" onclick="openCity('Week', this, '#FFA8A7')"
+	id="defaultOpen"><h4>Week</4></button>
+<button class="tablinkGraph" onclick="openCity('Month', this, '#FFA8A7')">
+	<h4>Month</h4></button>
+<button class="tablinkGraph" onclick="openCity('Year', this, '#FFA8A7')">
+	<h4>Year</h4></button>
 </div>
 
-<!-- buffer lines - need to fix ->
+
+<div class="activeHome">
+
+<h3 style="color:#FF2F2F">My Mood Chart</h3>
 
 <div class = "activeHome">
 		
-	<!-- Iterate through data.json -->
-
-
-
-	<!-- Build chart -->
-
-
-<div id="donutchart""></div>	
-
+<!-- Build chart -->
+<div id="donutchart""</div>
 
 </div>
+
+
+
 
 
 <div class="graphBuffer">
-<h5> You are having a balanced week!</h5>
-</div>
+<h5> You have been feeling sad lately.</h5>
+<h6> Take a look below to help boost your mood! </h6>
+
+ <p>{{#each posts}}
+	{{#if positive}}
+
+		<!-- If media is attached -->
+		<!-- If photo is attached -->
+		{{# if photoOn}}
+			<div class="post" id="{{id}}">
+				<img src ="{{photo}}" class="postPhoto">
+		
+			</div>
+			<hr>
+		{{/if}}
+
+		<!-- If video is attached -->
+		{{# if videoOn}}
+			<div class="post" id="{{id}}">
+				<video class="postVideo" controls>
+				<source src="{{video}}" type="video/mp4">
+				</video>
+			</div>
+			<hr>
+		{{/if}}
+
+		<!-- If audio is attached -->
+		{{# if audioOn}}
+			<div class="post" id="{{id}}">
+				<audio class="postAudio" controls>
+				<source src="{{audio}}" type="audio/mpeg">			
+				</audio>
+			</div>
+			<hr>
+		{{/if}}
+
+		<!-- If text is attached -->
+		{{# if textOn}}	
+			<div class="post" id="{{id}}">
+				<object class="postText" data={{text}}></object>
+			</div>
+			<hr>
+		{{/if}}
+
+		<!-- End if media -->
+
+	{{/if}}
+		
+<!-- End if positive -->
+{{/each}}</p>	
+
 
 <!-- Bottom fixed nav bar -->
+
+
 <div id="navbarbot">
 	<a href=""><img src="icons/dataRed.png"
 	class="iconimgbot"></a>
@@ -103,6 +152,7 @@ function drawChart() {
 <script src="/js/bootstrap.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/project.js"></script>
+<script src="/js/happy_B.js">
 
 </body>
 </html>

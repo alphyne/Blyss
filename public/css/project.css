@@ -8,7 +8,7 @@
 #navbartop {
   overflow: hidden;
   background-color: #F9F9F9;
-  height: 65px;
+  height: 72px;
   z-index:1;
   text-align: center;
 }
@@ -22,7 +22,6 @@
   padding: 10px;
   text-decoration: none;
   right: 0px;
-  width: 33%;
   height: 40px;
 }
 
@@ -88,7 +87,7 @@
 }
 
 .logoTop {
-  height: 50px;
+  height: 55px;
 }
 .iconimgtop {
   height: 36px;
@@ -133,12 +132,13 @@
 
 .emoteRow {
   text-align: center;
-  height: 100px;
-  padding: 20px;
+  height: 125px;
+  padding: 23px;
+  width: 100%;
 }
 
 .selectEmote {
-  height: 30px;
+  height: 38px;
 }
 
 /* button group css */
@@ -184,7 +184,7 @@
 }
 
 .graphBuffer {
-  height: 300px;
+  height: 275px;
   text-align: center;
 }
 
@@ -198,14 +198,15 @@
 }
 
 .loginLogo {
-  padding: 50px;
+  padding-top: 75px;
+  padding-bottom:20px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 .profilePic {
-  width: 40%;
+  width: 60%;
   padding: 10px;
   display: block;
   margin-left: auto;
@@ -267,8 +268,8 @@ a.startButton {
     border: none;
     outline: none;
     padding: 5px;
-    width: 16.5%;
-    height: 60px;
+    width: 16.6%;
+    height: 72px;
 }
 
 /* Change background color of buttons on hover */
@@ -292,3 +293,35 @@ a.startButton {
    text-align: center;
    color: #FFEDED;
 }
+
+/** Start happyGraph styling */
+
+/* Style the tab buttons */
+.tablinkGraph {
+    background-color: #E4E4E4;
+    float: left;
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 33.3%;
+    height: 72px;
+}
+
+/* Change background color of buttons on hover */
+.tablinkGraph:hover {
+    background-color: #FFA8A7;
+}
+
+/* Set default styles for tab content */
+.tabcontentGraph {
+    display: none;
+    text-align: center;
+}
+
+/* Style each tab content individually */ 
+#PositiveGraph {background-color:#FFA8A7;}
+#NegativeGraph {background-color:#E4E4E4;}
+
+/** End happy_B styling */
+
+
