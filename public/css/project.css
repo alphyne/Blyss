@@ -7,8 +7,8 @@
 /* Style the navbar */
 #navbartop {
   overflow: hidden;
-  background-color: #ffffff;
-  height: 60px;
+  background-color: #F9F9F9;
+  height: 65px;
   z-index:1;
   text-align: center;
 }
@@ -23,18 +23,20 @@
   text-decoration: none;
   right: 0px;
   width: 33%;
+  height: 40px;
 }
 
 #navbartop h3 {
   color: #FF2F2F;
 }
 
+
 #h2 {
   color: #FF2F2F;
 }
 #navbarbot {
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: #F9F9F9;
   height: 70px;
   z-index:1;
 }
@@ -85,6 +87,9 @@
   text-align: right;
 }
 
+.logoTop {
+  height: 50px;
+}
 .iconimgtop {
   height: 36px;
 }
@@ -97,6 +102,7 @@
 /* Start post formatting */
 
 .post {
+  padding: 5px;
   text-align: center;
 }
 
@@ -242,7 +248,6 @@ a.startButton {
 .tabcontentC {
     color: white;
     display: none;
-    padding: 50px;
     text-align: center;
 }
 
@@ -256,7 +261,7 @@ a.startButton {
 
 /* Style the tab buttons */
 .tablinkB {
-    background-color: #555;
+    background-color: #E4E4E4;
     color: white;
     float: left;
     border: none;
@@ -268,18 +273,22 @@ a.startButton {
 
 /* Change background color of buttons on hover */
 .tablinkB:hover {
-    background-color: #777;
+    background-color: #FFA8A7;
 }
 
 /* Set default styles for tab content */
 .tabcontentB {
     display: none;
-    padding: 50px;
     text-align: center;
 }
 
 /* Style each tab content individually */ 
-#PositiveB {background-color:#90EE90;}
-#NegativeB {background-color:#ff6666;}
+#PositiveB {background-color:#FFA8A7;}
+#NegativeB {background-color:#E4E4E4;}
 
 /** End happy_B styling */
+
+.cancelBot{
+   text-align: center;
+   color: #FFEDED;
+}
