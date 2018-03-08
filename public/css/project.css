@@ -3,6 +3,25 @@
 	margin-top: 2em
 }
 
+.activeHome h3 {
+  color: #FF2F2F;
+  font-family: 'Lato', sans-serif;
+}
+
+.graphBuffer h5 {
+  font-family: 'Lato', sans-serif;
+}
+
+.graphBuffer h6 {
+  font-family: 'Lato', sans-serif;
+}
+
+.botNavBar{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
 .mediaIcon {
   height: 27px;
   padding-left: 10px;
@@ -17,7 +36,7 @@
 #navbartop {
   overflow: hidden;
   background-color: #F9F9F9;
-  height: 72px;
+  height: 80px;
   z-index:1;
   text-align: center;
 }
@@ -36,16 +55,23 @@
 
 #navbartop h3 {
   color: #FF2F2F;
+  font-family: 'Lato', sans-serif;
 }
 
+#navbartop h5 {
+  font-family: 'Lato', sans-serif;
+}
 
+#navbartop h4 {
+  font-family: 'Lato', sans-serif;
+}
 #h2 {
   color: #FF2F2F;
 }
 #navbarbot {
   overflow: hidden;
   background-color: #F9F9F9;
-  height: 70px;
+  height: 90px;
   z-index:1;
 }
 
@@ -65,6 +91,10 @@
 /* Page content */
 .content {
   padding: 16px;
+}
+
+#navbarbot h4 {
+  font-family: 'Lato', sans-serif;
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
@@ -102,14 +132,14 @@
 }
 
 .logoTop {
-  height: 55px;
+  height: 65px;
 }
 .iconimgtop {
-  height: 36px;
+  height: 44px;
 }
 
 .iconimgbot {
-  height: 40px;
+  height: 50px;
 }
 /* End sticky nav bar */
 
@@ -118,6 +148,11 @@
 .post {
   padding: 5px;
   text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.post h5 {
+  font-family: 'Lato', sans-serif;
 }
 
 .activeHome{
@@ -126,7 +161,7 @@
 
 
 .postEmote {
-  height: 30px;
+  height: 35px;
 }
 
 .postPhoto {
@@ -152,6 +187,9 @@
   width: 100%;
 }
 
+.emoteRow h5 {
+  font-family: 'Lato', sans-serif;
+}
 .selectEmote {
   height: 45px;
 }
@@ -194,6 +232,14 @@
   padding: 20px;
 }
 
+.selectedEmoteContainer h4 {
+  font-family: 'Lato', sans-serif;
+}
+
+.selectedEmoteContainer h3 {
+  font-family: 'Lato', sans-serif;
+}
+
 .selectedEmote{
   height: 80px;
 }
@@ -219,6 +265,20 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.loginPage h5 {
+  font-family: 'Lato', sans-serif;
+}
+
+.loginPage h4 {
+  font-family: 'Lato', sans-serif;
+}
+
+.loginPage p {
+  font-family: 'Lato', sans-serif;
+}
+
+
 
 .profilePic {
   width: 60%;

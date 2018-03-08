@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bliss - Home</title>
+<title>Blyss - How I'm Feeling</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,14 +13,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script
 src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 <style>
 input[type=text]{
   width: 80%;
+  height: 75px;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  border-radius:4px;
+  border-radius: 1px;
 }
 </style>
 
@@ -31,9 +31,10 @@ input[type=text]{
 <!-- Top fixed nav bar -->
 <div id="navbartop">
 
-	<a class="submit-button" href="/home">Submit</a>
-	<a href="">Make Post</a>
-	<a href="/home">Cancel</a>
+	<a style="width:33%" class="submit-button" href="/home">
+	<h4>Submit</h4></a>
+	<a style="width:33%"></a>
+	<a style="width:33%"href="/home"><h4>Cancel</h4></a>
 
 </div>
 <!--
@@ -43,31 +44,38 @@ input[type=text]{
 	
 	<!-- Iterate through data.json -->
 	<div class="selectedEmoteContainer">
-	<h1><img src="emotes/anxious4.png" class="selectedEmote">
-	</h1>
+		<h1><img src="emotes/anxious4.png" class="selectedEmote">
+		</h1>
 	
-	<h4><a href="/selectEmote">Change emote</a>
-	</h4>
+		<h4><a style="color:#FF2F2F" href="/selectEmote">Change emote</a>
+		</h4>
 	</div>
 
-<div class ="textBox">
+	<div class ="textBox">
 
+	<hr>
+	<h3>I'm feeling</h3>
+	<form>
+  	<label for="mood"></label>
+  	<input type="text" id="mood" name="mood" 
+	placeholder="happy, relaxed, sad...">
+
+	</div>
+
+</div>
+	<div class="mediaRow">
+
+		<img class="mediaIcon" src="icons/photoRed.png">
+		<img class="mediaIcon" src="icons/videoRed.png">
+		<img class="mediaIcon" src="icons/audioRed.png">
+		<img class="mediaIcon" src="icons/textRed.png">
+	</div>
 <hr>
-<h6>I'm feeling...</h6>
-<form>
-  <label for="mood"></label>
-  <input type="text" id="mood" name="mood">
-
-</div>
-
-</div>
-
 
 <script src="/js/jquery-1.11.0.js"></script>
 <script src="/js/bootstrap.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/topNavOnly.js"></script>
-<script src="/js/happy1.js"></script>
 
 </body>
 </html>
