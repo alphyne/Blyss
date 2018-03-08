@@ -64,6 +64,9 @@ setTimeout(timer1801,1801000);
 </head>
 <body>
 
+<!-- Start version B -->
+{{#if viewAlt}}
+
 <!-- Top fixed nav bar -->
 <div id="navbartop">
 <button class="tablinkB" onclick="openCity('Happy', this, '#FFA8A7')"
@@ -405,6 +408,74 @@ setTimeout(timer1801,1801000);
 
 <div class="bufferBot"></div>
 
+
+<!-- End version B / Start version A -->
+{{else}}
+<div id="navbartop">	
+</div>
+
+	
+<div class = "activeHome"> 
+<h3>Your Happy Posts</h3>
+	</div>
+
+ <p>{{#each posts}}
+	<div class="post" id="{{id}}">
+		
+		<!-- If positive post -->
+		{{#if positive}}
+
+		<img src="{{emote}}" class="postEmote"></img>
+		<h5>You were feeling {{mood}} at {{date}}.</h5>
+
+
+		<!-- If media is attached -->
+		<!-- If photo is attached -->
+		{{# if photoOn}}
+			<img src ="{{photo}}" class="postPhoto">
+		{{/if}}
+
+		<!-- If video is attached -->
+		{{# if videoOn}}
+		<video class="postVideo" controls>
+			<source src="{{video}}" type="video/mp4">
+		</video>
+		{{/if}}
+
+		<!-- If audio is attached -->
+		{{# if audioOn}}
+		<audio class="postAudio" controls>
+			<source src="{{audio}}" type="audio/mpeg">			
+		</audio>
+		{{/if}}
+
+		<!-- If text is attached -->
+		{{# if textOn}}
+			<object class="postText" 
+			data={{text}}
+			></object>
+
+		{{/if}}
+
+		<!-- End if media -->
+
+		<hr>
+		{{/if}}
+		
+		<!-- End if positive -->
+
+	</div>
+	{{/each}}</p>
+</div>
+
+<div class="bufferBot"></div>
+{{/if}}
+<!-- End version A -->	
+	
+	
+	
+	
+	
 <!-- Bottom fixed nav bar -->
 <div class="botNavBar" id="navbarbot">
 	<a href="/graph"><img src="icons/dataGrey.png"
